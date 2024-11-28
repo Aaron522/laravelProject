@@ -23,26 +23,7 @@
             </div>
         </div>
     </div>
-    
-    <script>
-        function applySavedTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-bs-theme', savedTheme);
-                document.getElementById("toggleSwitch").innerHTML = savedTheme === 'light' ? 'Dark' : 'Light';
-            }
-        }
-    
-        document.getElementById("toggleSwitch").addEventListener('click', () => {
-            let currentTheme = document.documentElement.getAttribute('data-bs-theme');
-            let newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-bs-theme', newTheme);
-            document.getElementById("toggleSwitch").innerHTML = newTheme === 'light' ? 'Dark' : 'Light';
-            localStorage.setItem('theme', newTheme);
-        });
-    
-        applySavedTheme();
-    </script>
+
 
     <div class="container my-3">
         <h1 class="text-center">Aaron Hussain</h1>
@@ -64,12 +45,35 @@
     @section('content')
 
     <div class="container">
-        <h3 class="mt-5 mb-3">About Aaron</h3>
+        <h3 class="mt-5 mb-3">About Me</h3>
         <p>I am a freelance software developer who has created many projects in the past. These can be seen the home page of this website. I have been programming for eight years now and have accomplised many projects within this time. This experience include fullstack website development and python data analysis. More about my personal projects can be found on the projects part of the home page. I also have developed numerous ways to debug errors in progams and make sure that there are no issues in production.</p>
 
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     @endsection
+        
+    <script>
+        console.log('theme script loaded')
+        function applySavedTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-bs-theme', savedTheme);
+                document.getElementById("toggleSwitch").innerHTML = savedTheme === 'light' ? 'Dark' : 'Light';
+            }
+        }
+    
+        document.getElementById("toggleSwitch").addEventListener('click', () => {
+            let currentTheme = document.documentElement.getAttribute('data-bs-theme');
+            let newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', newTheme);
+            document.getElementById("toggleSwitch").innerHTML = newTheme === 'light' ? 'Dark' : 'Light';
+            localStorage.setItem('theme', newTheme);
+        });
+    
+        applySavedTheme();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>

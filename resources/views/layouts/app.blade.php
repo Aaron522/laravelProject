@@ -22,6 +22,9 @@
             <li class="nav-item">
                 <a href="{{ route('contact') }}" class="nav-link {{ Request::routeIs('contact') ? 'active' : '' }}">Contact Me</a>
             </li>
+            <li class="nav-item">
+                <a href="{{ route('projects') }}" class="nav-link {{ Request::routeIs('projects') ? 'active' : '' }}">My Projects</a>
+            </li>
 </ul>
 
         </nav>

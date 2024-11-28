@@ -1,8 +1,7 @@
+# **My Personal Portfolio Website**
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="Stock Image" width="200"/>
 </p>
-# **My Personal Portfolio Website**
-
 This is my personal portfolio website showcasing my skills, projects, and experience in web development and software engineering. Built with Laravel and Bootstrap, the site is fully responsive and features dynamic navigation, a theme toggle (light/dark mode), and an interactive layout.
 
 ## **Features**
